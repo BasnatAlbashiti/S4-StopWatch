@@ -15,7 +15,7 @@
                     <Ellipse Width="200" Height="200" Stroke="Black" StrokeThickness="3" Fill="White"/>
 
                     <!-- Minutes hand (short, thick) -->
-                    <Line X1="100" Y1="100" X2="100" Y2="40" Stroke="Gray" StrokeThickness="4">
+                    <Line X1="100" Y1="100" X2="100" Y2="40" Stroke="Gray"StrokeThickness="4">
                         <Line.RenderTransform>
                             <RotateTransform Angle="0" CenterX="100" CenterY="100"/>
                         </Line.RenderTransform>
