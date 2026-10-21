@@ -6,11 +6,40 @@
         xmlns:local="clr-namespace:S4"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Line X1="100" Y1="100" X2="100" Y2="20" Stroke="Red" StrokeThickness="2">
-            <Line.RenderTransform>
-                <RotateTransform Angle="180" CenterX="100" CenterY="100"/>
-            </Line.RenderTransform>
-        </Line>
-    </Grid>
+    <TabControl>
+        <TabItem Header="Chronomètre">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <!-- The clock face -->
+                <Canvas Width="200" Height="200">
+                    <Ellipse Width="200" Height="200" Stroke="Black" StrokeThickness="3" Fill="White"/>
+
+                    <!-- Minutes hand (short, thick) -->
+                    <Line X1="100" Y1="100" X2="100" Y2="40" Stroke="Gray" StrokeThickness="4">
+                        <Line.RenderTransform>
+                            <RotateTransform Angle="0" CenterX="100" CenterY="100"/>
+                        </Line.RenderTransform>
+                    </Line>
+
+                    <!-- Seconds hand (long, thin, gray) -->
+                    <Line X1="100" Y1="100" X2="100" Y2="20" Stroke="Gray" StrokeThickness="2">
+                        <Line.RenderTransform>
+                            <RotateTransform Angle="45" CenterX="100" CenterY="100"/>
+                        </Line.RenderTransform>
+                    </Line>
+
+                    <!-- Small dot in the center -->
+                    <Ellipse Width="10" Height="10" Fill="Gray" Canvas.Left="95" Canvas.Top="95"/>
+                </Canvas>
+
+                <!-- The three buttons -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Button Content="Start" Width="90" Margin="5"/>
+                    <Button Content="Stop" Width="90" Margin="5"/>
+                    <Button Content="Reset" Width="90" Margin="5"/>
+                </StackPanel>
+
+            </StackPanel>
+        </TabItem>
+    </TabControl>
 </Window>
