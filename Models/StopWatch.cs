@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace S4.Models
 {
-    internal class StopWatch
+    public class StopWatch
     {
         public int ElapsedSeconds { get; private set; }
         public bool IsRunning { get; private set; }
